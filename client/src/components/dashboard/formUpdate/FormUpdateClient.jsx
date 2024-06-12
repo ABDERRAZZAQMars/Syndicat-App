@@ -18,14 +18,14 @@ function FormUpdateClient() {
   const [apartments, setApartments] = useState([]);
   useEffect(() => {
     axios.get(LINK + "/appartements").then((res) => setApartments(res.data));
-  }, []);
+  },[]);
 
   const navigate = useNavigate();
   const { id } = useParams();
 
   useEffect(() => {
     axios.get(LINK + "/client/" + id).then((res) => setData(res.data));
-  }, []);
+  },[]);
 
   const handleChange = (e) => {
     setData({ ...data, [e.target.name]: e.target.value });

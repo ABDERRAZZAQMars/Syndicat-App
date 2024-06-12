@@ -1,13 +1,9 @@
 import React from "react";
 import { useContext } from "react";
 import {
-  HiMenuAlt2,
   FaUserCircle,
-  HiMenuAlt3,
-  BiSearch,
 } from "../../../assets/icons";
 import { UserContext } from "../../../useContext/UserContext";
-
 
 function Navbar() {
 
@@ -16,7 +12,6 @@ function Navbar() {
   return (
     <div className="navbar bg-gray-800 text-white">
       <div className="navbar-start">
-        
       </div>
       <div className="navbar-end flex px-3">
         <div className="dropdown dropdown-end flex flex-row items-center">
@@ -26,7 +21,6 @@ function Navbar() {
             </div>
           </label>
           <p className="text-white">{auth.admin?.Full_Name ? auth.admin?.Full_Name : 'Admin' } </p>
-          
         </div>
       </div>
     </div>

@@ -1,10 +1,8 @@
 import React from 'react'
 
-const ReglagesPage = () => {
+function ReglagesPage() {
   return (
-    <div>
-      
-    </div>
+    <div>ReglagesPage</div>
   )
 }
 

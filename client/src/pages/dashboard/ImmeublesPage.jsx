@@ -1,9 +1,9 @@
 import React from 'react'
 
-const ImmeublesPage = () => {
+function ImmeublesPage() {
   return (
     <div>
-      
+      ImmeublesPage
     </div>
   )
 }

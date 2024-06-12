@@ -1,10 +1,8 @@
 import React from 'react'
 
-const MessagesPage = () => {
+function MessagesPage() {
   return (
-    <div>
-      
-    </div>
+    <div>MessagesPage</div>
   )
 }
 
