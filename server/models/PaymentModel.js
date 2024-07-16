@@ -11,7 +11,7 @@ const paymentSchema = mongoose.Schema({
     Number_Appartement: {
         type: Number,
         require: [true, "SVP Entrer Votre Number de Appartement"],
-        ref: Appartement
+        ref: Client
     },
     Date: {
         type: Date,

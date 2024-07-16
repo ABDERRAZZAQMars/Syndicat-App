@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import TableClient from "../../components/dashboard/tables/TableClient";
+
 const LINK = "http://localhost:8000/api/admin";
 
 function ClientsPage() {
@@ -18,3 +19,4 @@ function ClientsPage() {
 }
 
 export default ClientsPage;
+

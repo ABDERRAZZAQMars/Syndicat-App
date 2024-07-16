@@ -19,7 +19,7 @@ function FormAddPayment() {
 
   useEffect(() => {
     axios.get(LINK + "/client/" + id).then((res) => setData(res.data));
-  }, []);
+  },[]);
 
   const handleChange = (e) => {
     setData({ ...data, [e.target.name]: e.target.value });
@@ -27,7 +27,11 @@ function FormAddPayment() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await axios.post(LINK + "/payment", data);
+    try {
+      await axios.post(LINK + "/payment", data);
+    } catch (error) {
+      console.log("test")
+    }
     navigate("/dashboard/facture");
   };
 

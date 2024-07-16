@@ -5,17 +5,16 @@ import { BiSearch } from "../../../assets/icons";
 
 const LINK = "http://localhost:8000/api/admin";
 
-function TableClient({ clients, setDeleted }) {
-  const deleteClient = (id) => {
-    axios
-      .delete(LINK + "/client/" + id)
-      .then(() => setDeleted((prev) => !prev));
-  };
-
+function TablePaiement({ paiements, setDeleted }) {
+    const deleteClient = (id) => {
+        axios
+          .delete(LINK + "/client/" + id)
+          .then(() => setDeleted((prev) => !prev));
+      };
   return (
     <div className="flex flex-col gap-3">
       <div className="flex flex-row justify-between items-center align-middle bg-white px-4 pt-3 pb-4 rounded-sm border border-gray-200 flex-1">
-        <h1 className="text-2xl font-bold">Liste Clients</h1>
+        <h1 className="text-2xl font-bold">Liste Paiements</h1>
         <div className="flex flex-row gap-2">
           <div className="form-control">
             <div className="input-group">
@@ -42,38 +41,24 @@ function TableClient({ clients, setDeleted }) {
           <thead>
             <tr>
               <th>ID</th>
-              <th>Prénom</th>
-              <th>Nom de famille</th>
               <th>CIN</th>
-              <th>Email</th>
-              <th>Téléphone</th>
               <th>Appartement</th>
               <th>Option</th>
             </tr>
           </thead>
           <tbody>
-            {clients.map((client) => (
+            {paiements.map((paiements) => (
               <tr>
-                <td>{client._id}</td>
-                <td>{client.First_Name}</td>
-                <td>{client.Last_Name}</td>
-                <td>{client.CIN}</td>
-                <td>{client.Email}</td>
-                <td>{client.Phone}</td>
-                <td>{client.Number_Appartement}</td>
+                <td>{paiements._id}</td>
+                <td>{paiements.CIN}</td>
+                <td>{paiements.Number_Appartement}</td>
                 <td className="flex flex-row gap-2">
                   <Link
-                    to={"/dashboard/formupdateclient/" + client._id}
-                    className="btn btn-ghost btn-xs bg-color-primary text-white"
+                    to={"/dashboard/paiement/" + paiements._id}
+                    className="btn btn-ghost btn-xs bg-color-secondary text-white"
                   >
-                    Modifier
+                    Paiement
                   </Link>
-                  <button
-                    onClick={() => deleteClient(client._id)}
-                    className="btn btn-ghost btn-xs bg-red-600 text-white"
-                  >
-                    Suprimer
-                  </button>
                 </td>
               </tr>
             ))}
@@ -81,7 +66,7 @@ function TableClient({ clients, setDeleted }) {
         </table>
       </div>
     </div>
-  );
+  )
 }
 
-export default TableClient;
+export default TablePaiement

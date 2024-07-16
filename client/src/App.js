@@ -43,7 +43,8 @@ function App() {
             <Route path="client" element={<ClientsPage />} />
             <Route path="immeuble" element={<ImmeublesPage />} />
             <Route path="message" element={<MessagesPage />} />
-            <Route path="paiement/:id" element={<PaiementsPage />} />
+            <Route path="paiement" element={<PaiementsPage />} />
+            <Route path="paiement/:id" element={<FormAddPayment />} />
             <Route path="reglage" element={<ReglagesPage />} />
             <Route path="facture" element={<FacturesPage />} />
             <Route path="formaddpayment" element={<FormAddPayment />} />

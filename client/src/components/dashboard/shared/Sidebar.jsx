@@ -27,7 +27,7 @@ function Sidebar() {
     { name: "Messages", Link: "#", icon: BiMessageSquare },
     {
       name: "Immeubles",
-      Link: "#",
+      Link: "/dashboard/immeuble",
       icon: BsBuilding,
       margin: true,
     },
@@ -38,18 +38,18 @@ function Sidebar() {
     },
     {
       name: "Paiements",
-      Link: "#",
+      Link: "/dashboard/paiement",
       icon: MdPayment,
       margin: true,
     },
     { name: "Factures", Link: "/dashboard/facture", icon: AiOutlineFileText },
     {
       name: "Réglages",
-      Link: "#",
+      Link: "/dashboard/reglage",
       icon: AiOutlineSetting,
       margin: true,
     },
-    { name: "Se déconnecter", Link: "/", icon: IoMdLogOut },
+    { name: "Se déconnecter", Link: "/", icon: IoMdLogOut},
   ];
   const [open, setOpen] = useState(true);
   return (
